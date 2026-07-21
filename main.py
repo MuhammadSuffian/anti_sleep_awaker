@@ -6,7 +6,10 @@ import os
 import time
 
 # Streamlit app URL from environment variable (or default)
-STREAMLIT_URL = os.environ.get("https://iesa-intelligent-energy-scenario-analysis-live-nkfuuzjjkmpmjcj.streamlit.app/")
+STREAMLIT_URL = os.environ.get(
+    "STREAMLIT_APP_URL",
+    "https://iesa-intelligent-energy-scenario-analysis-live-nkfuuzjjkmpmjcj.streamlit.app/"
+)
 
 # How long to keep the page open (seconds) so Streamlit registers real activity
 VISIT_DURATION = 20
