@@ -28,11 +28,7 @@ def main():
         driver.get(STREAMLIT_URL)
         print(f"Opened {STREAMLIT_URL}")
 
-        # Keep the page open for a bit so the app registers a real visit
-        # (Streamlit apps rely on an active websocket connection, not just
-        # an HTTP GET, so a brief dwell time matters)
         time.sleep(VISIT_DURATION)
-
         print(f"Kept page open for {VISIT_DURATION}s ✅")
 
     except Exception as e:
